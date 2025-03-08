@@ -1,0 +1,113 @@
+/* Definindo variáveis CSS no :root */
+:root {
+    /* Tamanhos de fonte e espaçamentos para telas grandes */
+    --font-size-large: 2.5rem;
+    --font-size-medium: 2rem;
+    --font-size-small: 1.5rem;
+    --spacing-large: 2rem;
+    --spacing-medium: 1.5rem;
+    --spacing-small: 1rem;
+  }
+  
+  /* Aplicando variáveis CSS aos elementos */
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+  }
+  
+  header {
+    background-color: #333;
+    color: white;
+    padding: var(--spacing-large);
+    text-align: center;
+  }
+  
+  header h1 {
+    font-size: var(--font-size-large);
+  }
+  
+  header p {
+    font-size: var(--font-size-medium);
+  }
+  
+  section {
+    padding: var(--spacing-large);
+  }
+  
+  section h2 {
+    font-size: var(--font-size-medium);
+  }
+  
+  section p {
+    font-size: var(--font-size-small);
+    margin-top: var(--spacing-medium);
+  }
+  
+  footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: var(--spacing-small);
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+  }
+  
+  /* Media query para telas pequenas */
+  @media (max-width: 600px) {
+    :root {
+      --font-size-large: 1.8rem;
+      --font-size-medium: 1.6rem;
+      --font-size-small: 1.2rem;
+      --spacing-large: 1.5rem;
+      --spacing-medium: 1rem;
+      --spacing-small: 0.8rem;
+    }
+  
+    header h1 {
+      font-size: var(--font-size-medium);
+    }
+  
+    header p {
+      font-size: var(--font-size-small);
+    }
+  
+    section h2 {
+      font-size: var(--font-size-medium);
+    }
+  
+    section p {
+      font-size: var(--font-size-small);
+    }
+  }
+  
+  /* Media query para telas médias (tablets e dispositivos maiores) */
+  @media (min-width: 601px) and (max-width: 1024px) {
+    :root {
+      --font-size-large: 2.2rem;
+      --font-size-medium: 1.8rem;
+      --font-size-small: 1.4rem;
+      --spacing-large: 1.8rem;
+      --spacing-medium: 1.3rem;
+      --spacing-small: 1rem;
+    }
+  
+    header h1 {
+      font-size: var(--font-size-large);
+    }
+  
+    header p {
+      font-size: var(--font-size-medium);
+    }
+  
+    section h2 {
+      font-size: var(--font-size-medium);
+    }
+  
+    section p {
+      font-size: var(--font-size-small);
+    }
+  }
+  
